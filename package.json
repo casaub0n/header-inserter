@@ -14,7 +14,7 @@
   "repository": "git@github.com:casaub0n/header-inserter.git",
   "scripts": {
     "build": "rimraf dist && parcel build src/index.ts",
-    "test": "echo hello",
+    "test": "jest --watch",
     "npm:publish": "yarn build && yarn publish"
   },
   "files": [
@@ -29,6 +29,7 @@
     "access": "public"
   },
   "devDependencies": {
+    "jest": "^26.1.0",
     "parcel": "^1.12.4",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.7"
