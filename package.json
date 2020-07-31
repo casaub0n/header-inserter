@@ -1,6 +1,6 @@
 {
   "name": "header-inserter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Inserting header in your bundle JavaScript file.",
   "author": {
     "name": "casaub0n",
@@ -14,10 +14,10 @@
   "repository": "git@github.com:casaub0n/header-inserter.git",
   "scripts": {
     "build": "rimraf dist && parcel build src/index.ts --target node",
-    "start": "node dist/index.js",
     "test": "echo hello",
     "npm:publish": "yarn build && yarn publish"
   },
+  "bin": "./dist/index.js",
   "files": [
     "dist"
   ],
