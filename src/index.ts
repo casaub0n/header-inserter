@@ -7,7 +7,7 @@ type UserScriptHeader = {
   namespace: string,
   version: string
   description: string
-  authoer: string,
+  author: string,
   match: string,
   grant: string
 }
@@ -17,7 +17,7 @@ const configPath = path.join(process.cwd(), 'userscript.json')
 console.log(configPath)
 const configJson: UserScriptHeader = JSON.parse(fs.readFileSync(configPath, 'utf-8'))
 const userScriptHeader = "// ==UserScript==\n// @name         " + configJson.name + "\n// @namespace    " + configJson.namespace + "\n// @version      "
-  + configJson.version + "\n// @description  " + configJson.description + "\n// @author       " + configJson.authoer + "\n// @match        "
+  + configJson.version + "\n// @description  " + configJson.description + "\n// @author       " + configJson.author + "\n// @match        "
   + configJson.match + "\n// @grant        " + configJson.grant + "\n// ==/UserScript==\n\n"
 
 console.log(`config json: \n${userScriptHeader}`)
