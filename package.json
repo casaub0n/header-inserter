@@ -13,8 +13,8 @@
   },
   "repository": "git@github.com:casaub0n/header-inserter.git",
   "scripts": {
-    "build": "rimraf dist && parcel build src/index.ts",
-    "test": "jest --watch",
+    "build": "rimraf dist && parcel build src/index.ts --target node",
+    "test": "echo hello",
     "npm:publish": "yarn build && yarn publish"
   },
   "files": [
@@ -33,5 +33,8 @@
     "parcel": "^1.12.4",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "firstline": "^2.0.2"
   }
 }
