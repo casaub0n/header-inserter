@@ -30,7 +30,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "jest": "26.1.0",
+    "jest": "26.2.2",
     "parcel": "1.12.4",
     "rimraf": "3.0.2",
     "typescript": "3.9.7"
