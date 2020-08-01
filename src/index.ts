@@ -3,23 +3,38 @@ import fs from 'fs'
 import { insertHeader } from './insertHeader'
 
 type UserScriptHeader = {
-  name: string,
-  namespace: string,
+  name: string
+  namespace: string
   version: string
   description: string
-  author: string,
-  match: string,
+  author: string
+  match: string
   grant: string
 }
 
 console.log(process.cwd())
 const configPath = path.join(process.cwd(), 'userscript.json')
 console.log(configPath)
-const configJson: UserScriptHeader = JSON.parse(fs.readFileSync(configPath, 'utf-8'))
-const userScriptHeader = "// ==UserScript==\n// @name         " + configJson.name + "\n// @namespace    " + configJson.namespace + "\n// @version      "
-  + configJson.version + "\n// @description  " + configJson.description + "\n// @author       " + configJson.author + "\n// @match        "
-  + configJson.match + "\n// @grant        " + configJson.grant + "\n// ==/UserScript==\n\n"
+const configJson: UserScriptHeader = JSON.parse(
+  fs.readFileSync(configPath, 'utf-8')
+)
+const userScriptHeader =
+  '// ==UserScript==\n// @name         ' +
+  configJson.name +
+  '\n// @namespace    ' +
+  configJson.namespace +
+  '\n// @version      ' +
+  configJson.version +
+  '\n// @description  ' +
+  configJson.description +
+  '\n// @author       ' +
+  configJson.author +
+  '\n// @match        ' +
+  configJson.match +
+  '\n// @grant        ' +
+  configJson.grant +
+  '\n// ==/UserScript==\n\n'
 
 console.log(`config json: \n${userScriptHeader}`)
-const files = process.argv.slice(2);
+const files = process.argv.slice(2)
 files.map((f) => insertHeader(f, userScriptHeader))
