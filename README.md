@@ -21,3 +21,6 @@ Prepare userscript.json for user script header
 ```console
 node node_module/.bin/header-inserter ./dist/index.js
 ```
+
+## Follow this example
+[test-project](https://github.com/casaub0n/header-inserter/tree/master/examples/test-project)
