@@ -1,4 +1,5 @@
 <h2 align="center">Header Inserter</h2>
+
 [![Node CI](https://github.com/casaub0n/header-inserter/workflows/Node%20CI/badge.svg)](https://github.com/casaub0n/header-inserter/actions?query=workflow%3A%22Node+CI%22)
 
 Inserting header in your bundle JavaScript file.
