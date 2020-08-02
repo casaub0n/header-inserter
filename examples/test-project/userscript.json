@@ -1,0 +1,9 @@
+{
+  "name": "test project",
+  "namespace": "https://github.com/casaub0n",
+  "version": "0.1",
+  "description": "example",
+  "author": "casaub0n",
+  "match": "*",
+  "grant": "none"
+}

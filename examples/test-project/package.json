@@ -1,0 +1,37 @@
+{
+  "name": "@casaub0n/test-project",
+  "version": "1.0.7",
+  "description": "example",
+  "license": "MIT",
+  "repository": "casaub0n/test-project",
+  "author": {
+    "name": "casaub0n",
+    "email": "netzach.yoshida@gmail.com",
+    "url": "https://github.com/casaub0n"
+  },
+  "main": "dist",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "rimraf dist && parcel build src/index.ts && node node_modules/.bin/header-inserter ./dist/index.js",
+    "test": "echo hello",
+    "npm:publish": "yarn build && yarn publish"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "userscript"
+  ],
+  "devDependencies": {
+    "header-inserter": "1.0.6",
+    "parcel": "1.12.4",
+    "rimraf": "3.0.2",
+    "typescript": "3.9.7"
+  },
+  "types": "dist",
+  "publishConfig": {
+    "access": "public"
+  }
+}
