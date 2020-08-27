@@ -5,5 +5,6 @@
   "description": "add badge for action link",
   "author": "casaub0n",
   "match": "https://github.com/*/*/actions*",
-  "grant": "none"
+  "grant": "none",
+  "sameversion": true
 }
