@@ -1,6 +1,6 @@
 {
   "name": "header-inserter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Inserting header in your bundle JavaScript file.",
   "author": {
     "name": "casaub0n",
