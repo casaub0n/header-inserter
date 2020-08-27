@@ -10,6 +10,7 @@ type UserScriptHeader = {
   author: string
   match: string
   grant: string
+  sameversion?: string
 }
 
 console.log(process.cwd())
@@ -18,6 +19,13 @@ console.log(configPath)
 const configJson: UserScriptHeader = JSON.parse(
   fs.readFileSync(configPath, 'utf-8')
 )
+
+if (configJson.sameversion) {
+  const packageJsonPath = path.join(process.cwd(), 'package.json')
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'))
+  configJson.version = packageJson.version
+}
+
 const userScriptHeader =
   '// ==UserScript==\n// @name         ' +
   configJson.name +
